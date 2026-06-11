@@ -79,6 +79,17 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
 directionalLight.position.set(5, 5, 5);
 scene.add(directionalLight);
 
+// Ajusta o tamanho quando a janela for redimensionada
+window.addEventListener('resize', () => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+
+  effect.setSize(width / 1.5, height / 1.5);
+});
+
 // animação
 function animate() {
   requestAnimationFrame(animate);

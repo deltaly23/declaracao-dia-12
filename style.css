@@ -1,12 +1,35 @@
 body {
-    text-align: center;
     margin: 0;
     background: black;
     color: white;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+p {
+    text-align: center;
+}
+
+.card {
+    display: none;
+}
+
+.active {
+    display: block;
 }
 
 .ascii-animation {
     display: grid;
     place-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
